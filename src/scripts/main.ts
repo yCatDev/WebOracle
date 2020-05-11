@@ -26,9 +26,10 @@ class AcientText
         if (textToo)
         {
             this.element.textContent = this.trueText;
-            this.element.classList.add("selected");
+            this.element.classList.add("selectedText");
             this.element.id = "there";
-            EPPZScrollTo.scrollVerticalToElementById("there", 0);
+            console.log(document.documentElement.clientHeight);
+            EPPZScrollTo.scrollVerticalToElementById("there", document.documentElement.clientHeight/2);
         }
         this.element.classList.add("showedText");
     }
@@ -43,14 +44,17 @@ window.onload = () =>
     {
         text.push(new AcientText(elements[i]));
     }
-
+    let clicked = false;
     let button = document.getElementById("startButton");
     button.addEventListener("click", () => {
+        if (clicked) return;
         let s = RandomInt(0, text.length);
         for (let i = 0; i < text.length; i++){
             text[i].show(i==s);
         }
+        clicked = true;
     })
+    EPPZScrollTo.scrollVerticalToElementById("top", document.documentElement.clientHeight/2);
 }
 
 

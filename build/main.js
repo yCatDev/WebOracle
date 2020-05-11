@@ -16,9 +16,10 @@ var AcientText = /** @class */ (function () {
     AcientText.prototype.show = function (textToo) {
         if (textToo) {
             this.element.textContent = this.trueText;
-            this.element.classList.add("selected");
+            this.element.classList.add("selectedText");
             this.element.id = "there";
-            EPPZScrollTo.scrollVerticalToElementById("there", 0);
+            console.log(document.documentElement.clientHeight);
+            EPPZScrollTo.scrollVerticalToElementById("there", document.documentElement.clientHeight / 2);
         }
         this.element.classList.add("showedText");
     };
@@ -30,12 +31,17 @@ window.onload = function () {
     for (var i = 0; i < elements.length; i++) {
         text.push(new AcientText(elements[i]));
     }
+    var clicked = false;
     var button = document.getElementById("startButton");
     button.addEventListener("click", function () {
+        if (clicked)
+            return;
         var s = RandomInt(0, text.length);
         for (var i = 0; i < text.length; i++) {
             text[i].show(i == s);
         }
+        clicked = true;
     });
+    EPPZScrollTo.scrollVerticalToElementById("top", document.documentElement.clientHeight / 2);
 };
 //# sourceMappingURL=main.js.map

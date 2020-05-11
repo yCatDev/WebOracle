@@ -13,6 +13,10 @@ p{
     color: #4f5b62;
 }
 
+footer{
+    height: 1000px;
+}
+
 .headerText{
     font-family: 'Yeseva One', cursive;
 }
@@ -24,9 +28,25 @@ p{
     font-family: 'MedievalSharp', Caveat, cursive;
 }
 
+.predictionText
+{
+    padding: 25px;
+}
 
+.selectedText{
+    animation: select 2s;
+    animation-fill-mode:forwards;
+}
 
-
+@keyframes select {
+    0%{
+        color: #4f5b62;
+    }
+    100%
+    {
+        color: #ffea00;
+    }
+}
 
 
 .otherText{
@@ -64,4 +84,8 @@ p{
 {
     color: #ff3d00;
     cursor: pointer;
+}
+#top
+{
+    height: 100px;
 }
