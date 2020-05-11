@@ -1,3 +1,5 @@
+
+
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 function RandomInt(min: number, max: number){
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -25,6 +27,8 @@ class AcientText
         {
             this.element.textContent = this.trueText;
             this.element.classList.add("selected");
+            this.element.id = "there";
+            EPPZScrollTo.scrollVerticalToElementById("there", 0);
         }
         this.element.classList.add("showedText");
     }
@@ -43,8 +47,9 @@ window.onload = () =>
     let button = document.getElementById("startButton");
     button.addEventListener("click", () => {
         let s = RandomInt(0, text.length);
-        for (let i = 0; i < text.length; i++)
+        for (let i = 0; i < text.length; i++){
             text[i].show(i==s);
+        }
     })
 }
 

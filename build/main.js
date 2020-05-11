@@ -17,6 +17,8 @@ var AcientText = /** @class */ (function () {
         if (textToo) {
             this.element.textContent = this.trueText;
             this.element.classList.add("selected");
+            this.element.id = "there";
+            EPPZScrollTo.scrollVerticalToElementById("there", 0);
         }
         this.element.classList.add("showedText");
     };
@@ -31,8 +33,9 @@ window.onload = function () {
     var button = document.getElementById("startButton");
     button.addEventListener("click", function () {
         var s = RandomInt(0, text.length);
-        for (var i = 0; i < text.length; i++)
+        for (var i = 0; i < text.length; i++) {
             text[i].show(i == s);
+        }
     });
 };
 //# sourceMappingURL=main.js.map
