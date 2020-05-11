@@ -6,33 +6,28 @@
 
 body{
     background-color: #000a12;
+    overflow: hidden;
 }
 
 p{
     color: #4f5b62;
-
 }
 
 .headerText{
     font-family: 'Yeseva One', cursive;
 }
 
-.predictionText
+.ancientText
 {
-    font-family: 'MedievalSharp', 'Caveat', cursive;
-
     font-size: 36pt;
-}
-
-.startButton{
     text-align: center;
+    font-family: 'MedievalSharp', Caveat, cursive;
 }
 
-.startButton:hover
-{
-    color: #ff3d00;
-    cursor: pointer;
-}
+
+
+
+
 
 .otherText{
     font-family: 'Gabriela', serif;
@@ -48,10 +43,6 @@ p{
     font-size: 28pt;
 }
 
-.startButton
-{
- 
-}
 
 .shadow
 {
@@ -61,5 +52,16 @@ p{
 
 #predictions-container
 {
+    //padding-top: 50%;
+}
 
+#startButton{
+    text-align: center;
+    font-size: 36pt;
+    font-family: 'Caveat', cursive;
+}
+#startButton:hover
+{
+    color: #ff3d00;
+    cursor: pointer;
 }
