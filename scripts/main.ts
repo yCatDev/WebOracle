@@ -1,5 +1,4 @@
 
-
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 function RandomInt(min: number, max: number){
     return min+Math.round(Math.random()*max)
@@ -56,6 +55,3 @@ window.onload = () =>
     })
     EPPZScrollTo.scrollVerticalToElementById("top", document.documentElement.clientHeight/2);
 }
-
-
-
