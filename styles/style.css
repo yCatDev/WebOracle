@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Gabriela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+
+body{
+    background-color: #000a12;
+}
+
+p{
+    color: #4f5b62;
+
+}
+
+.headerText{
+    font-family: 'Yeseva One', cursive;
+}
+
+.predictionText
+{
+    font-family: 'MedievalSharp', 'Caveat', cursive;
+
+    font-size: 36pt;
+}
+
+.startButton{
+    text-align: center;
+}
+
+.startButton:hover
+{
+    color: #ff3d00;
+    cursor: pointer;
+}
+
+.otherText{
+    font-family: 'Gabriela', serif;
+}
+
+.welcome-text{
+    text-align: center;
+    font-size: 72pt;
+}
+
+.promo-text{
+    text-align: center;
+    font-size: 28pt;
+}
+
+.startButton
+{
+ 
+}
+
+.shadow
+{
+    text-shadow: 0 1px 1px #000000;
+}
+
+
+#predictions-container
+{
+
+}
